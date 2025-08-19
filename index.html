@@ -20,7 +20,7 @@
 
     /* ヘッダー */
     header {
-      background-color: #440000; /* 変更 */
+      background-color: #440000;
       color: white;
       padding: 20px;
       text-align: center;
@@ -29,7 +29,38 @@
     /* メイン */
     main {
       padding: 20px;
-      color: #cc0000; /* 追加：文字色変更 */
+      color: #cc0000;
+    }
+
+    /* 画像のスタイル */
+    main img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    /* レシピのスタイル */
+    .recipe {
+      background-color: #fff0f0;
+      border-left: 6px solid #cc0000;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+
+    .recipe h3 {
+      margin-bottom: 10px;
+    }
+
+    .recipe ul {
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .recipe li {
+      margin-bottom: 5px;
     }
 
     /* フッター固定 */
@@ -37,7 +68,7 @@
       position: fixed;
       bottom: 0;
       width: 100%;
-      background-color: #440000; /* 変更 */
+      background-color: #440000;
       color: white;
       text-align: center;
       padding: 15px 10px;
@@ -52,6 +83,18 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    /* レスポンシブ対応 */
+    @media (max-width: 600px) {
+      main {
+        padding: 10px;
+      }
+
+      footer {
+        padding: 10px 5px;
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -62,12 +105,37 @@
   <main>
     <h2>最近作ったお菓子</h2>
     <p>カップケーキ</p>
-    <img src="https://raw.githubusercontent.com/daiki25819/test1/abdee90e708b1e561bcb5a4e31d728731bc9c0d4/cupcake.jpg" alt="サンプル">
-    <h3>レシピ</h3>
-    <p>オーブンを予熱（170℃）しておきます。</p>
+    <img src="https://raw.githubusercontent.com/daiki25819/test1/abdee90e708b1e561bcb5a4e31d728731bc9c0d4/cupcake.jpg" alt="カップケーキの写真">
+
+    <!-- カップケーキのレシピ -->
+    <section class="recipe">
+      <h3>🍰 カップケーキのレシピ（6個分）</h3>
+
+      <strong>材料：</strong>
+      <ul>
+        <li>薄力粉 - 100g</li>
+        <li>ベーキングパウダー - 小さじ1</li>
+        <li>砂糖 - 70g</li>
+        <li>無塩バター - 60g（室温）</li>
+        <li>卵 - 1個</li>
+        <li>牛乳 - 50ml</li>
+        <li>バニラエッセンス - 少々</li>
+      </ul>
+
+      <strong>作り方：</strong>
+      <ol>
+        <li>オーブンを170℃に予熱する。</li>
+        <li>バターをクリーム状にし、砂糖を加えて混ぜる。</li>
+        <li>溶き卵を少しずつ加え、よく混ぜる。</li>
+        <li>薄力粉とベーキングパウダーをふるい入れ、牛乳を交互に加えながら混ぜる。</li>
+        <li>バニラエッセンスを加える。</li>
+        <li>型に入れて170℃で20分ほど焼く。</li>
+        <li>冷まして完成！</li>
+      </ol>
+    </section>
+
     <h2>次作りたいお菓子</h2>
     <p>チョコレートブラウニー</p>
-     <img src="https://github.com/daiki25819/test1/blob/main/%E3%83%81%E3%83%A7%E3%82%B3%E3%83%AC%E3%83%BC%E3%83%88%E3%83%96%E3%83%A9%E3%82%A6%E3%83%8B%E3%83%BC.jpg?raw=true" alt="サンプル">
   </main>
 
   <footer>
@@ -80,10 +148,3 @@
   </footer>
 </body>
 </html>
-
-
-
-
-
-
-
